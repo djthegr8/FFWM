@@ -71,6 +71,7 @@ if __name__ == '__main__':
                     visualizer.display_test_results(model.get_current_visuals(), 0, True, prefix, idx=idx)
         visualizer.print_test_results(metric)
     else:
+        t = time.time()
         for i, data in enumerate(dataset_val):
             files = data['input_path']
             model.set_input(data)
@@ -78,4 +79,5 @@ if __name__ == '__main__':
             for idx, name in enumerate(files):
                 prefix = os.path.splitext(name)[0]
                 visualizer.display_test_results(model.get_current_visuals(), 0, True, prefix, idx=idx)
-
+        t_end = time.time()
+        print(f"Total time: {t_end-t}\nAverage time: {(t_end-t)/dataset_size_val}")
