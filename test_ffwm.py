@@ -81,4 +81,4 @@ if __name__ == '__main__':
                 prefix = os.path.splitext(name)[0]
                 visualizer.display_test_results(model.get_current_visuals(), 0, True, prefix, idx=idx)
         t_end = time.time()
-        print(f"Total time: {t_end-t}\nAverage time: {(t_end-t)/dataset_size_val}")
+        print(f"Total time: {t_end-t}s\nAverage time: {(t_end-t)/dataset_size_val} s/image")
