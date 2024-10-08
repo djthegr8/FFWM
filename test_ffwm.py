@@ -28,8 +28,9 @@ from data import create_dataset
 from models import create_model
 from util.visualizer import Visualizer
 from util.util import AverageMeter
-
+import warnings
 if __name__ == '__main__':
+    warnings.filterwarnings('ignore')
     train_opt = TestOptions()
     train_opt.parser.add_argument('--save_image', action='store_true', help='save test result?')
     train_opt.parser.add_argument('--datamode', type=str, default='multipie', help='data mode: multipie or lfw')

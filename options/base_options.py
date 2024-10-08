@@ -139,7 +139,7 @@ class BaseOptions():
             suffix = ('_' + opt.suffix.format(**vars(opt))) if opt.suffix != '' else ''
             opt.name = opt.name + suffix
 
-        self.print_options(opt)
+        # self.print_options(opt)
 
         # set gpu ids
         if opt.gpu_ids == 'all':
