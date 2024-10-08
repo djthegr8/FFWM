@@ -1,6 +1,8 @@
 .DS_Store
 datasets/
 results/
+checkpoints/
+*.Identifier
 build/
 dist/
 torch.egg-info/
